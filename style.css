@@ -16,3 +16,10 @@ body {
   font-family: cursive;
   text-decoration: underline;
 }
+.menu {
+  text-decoration: none;
+  color: gold;
+  border: 5px solid gold;
+  border-radius: 25px;
+  padding: 0 15px;
+}
