@@ -1,0 +1,13 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.mainTitle {
+  color:chocolate;
+  font-size: 90px;
+  background-color: aqua;
+}
+
+.optionText {
+  font-style:italic;
+}
