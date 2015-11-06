@@ -14,6 +14,7 @@
     background-color: red;
   }
 </style>
+<link rel="stylesheet" href="style.css">
 <body>
 <div class="container">
   <h1>Video Capture</h1>
@@ -99,7 +100,13 @@ function noStream(e) {
 function capture() {
   ctx.drawImage(video, 0, 0);
   var img = document.createElement('img');
+  img.className = 'image';
+  var container = document.createElement('div');
+  container.className = 'capture';
   img.src = canvas.toDataURL('image/png');
+  var time = document.createElement('div');
+  time.className = 'time';
+  time.innerHTML = (new Date).toString();
 
   var maxLeft = document.body.clientWidth;
   var maxTop = document.body.clientHeight;
@@ -107,10 +114,10 @@ function capture() {
   img.style.top = Math.floor(Math.random() * maxTop) + 'px';
   img.style.left = Math.floor(Math.random() * maxLeft) + 'px';
 
-  var time = document.createElement('div');
-  time.innerHTML = (new Date).toString();
-  gallery.appendChild(time);
-  gallery.appendChild(img);
+
+  gallery.appendChild(container);
+  container.appendChild(time);
+  container.appendChild(img);
 }
 
 function init(el) {
