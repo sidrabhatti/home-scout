@@ -1,5 +1,6 @@
-body {
+body, html {
   font-family: "Open Sans", sans-serif;
+  overflow: -moz-scrollbars-horizontal;
 }
 
 .mainTitle {
@@ -25,16 +26,39 @@ body {
 }
 
 #gallery {
-  display: block;
-  width: 100%;
-  overflow-x: scroll;
+    display: block;
+    width: 90%;
+    overflow-y: scroll;
+    height: 200px;
+    background-color: #fff;
 }
+
+
 #gallery .capture {
-  display: inline-block;
+    position: relative;
+    float: left;
 }
+
+
 #gallery .time {
   display: block;
 }
-#gallery .image {
-  display: block;
+
+
+
+
+#gallery img{
+  width: 200px;
+  height: 200px;
+}
+
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
 }
